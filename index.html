@@ -4,199 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dev.Sahil</title>
-  <!-- Site Icon -->
-  <link rel="icon" href="img/avatar.png" type="image/png">
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Sahil's Portfolio" />
+  <meta property="og:title" content="Sahil's portfolio" />
   <meta property="og:description" content="Hello there! It's me, Sahil, also known as Dev.Sahil. Open this website to know more about me." />
   <meta property="og:image" content="img/avatar.png" />
   <meta property="og:url" content="https://sahil.js.cool" />
-  <!-- Embed -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@yourtwitterhandle">
-  <meta name="twitter:creator" content="@yourtwitterhandle">
-  <meta name="twitter:title" content="Sahil's Portfolio">
-  <meta name="twitter:description" content="Hello there! It's me, Sahil, also known as Dev.Sahil. Open this website to know more about me.">
-  <meta name="twitter:image" content="img/avatar.png">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .banner-container {
-      text-align: center;
-      padding: 20px;
-    }
-    .banner {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-    }
-    .avatar {
-      width: 150px;
-      border-radius: 50%;
-      margin-top: -75px;
-      border: 5px solid #fff;
-    }
-    .name {
-      font-size: 2.5rem;
-      color: #333;
-      margin: 10px 0;
-    }
-    .bio {
-      font-size: 1.2rem;
-      margin: 10px 20px;
-      line-height: 1.6;
-    }
-    .categories {
-      font-size: 1.8rem;
-      color: #666;
-      margin: 20px 0 10px;
-      text-align: center;
-    }
-    .projects, .links {
-      font-size: 1.5rem;
-      color: #444;
-      text-align: center;
-      margin: 10px 0;
-    }
-    .button-1, .button-2, .button-3 {
-      display: inline-block;
-      margin: 10px;
-    }
-    .button-1, .button-2, .button-3 button {
-      font-size: 1rem;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .button-1 button { background-color: #800080; color: #fff; }
-    .button-2 button { background-color: #00ff00; color: #fff; }
-    .button-3 button { background-color: #ff0000; color: #fff; }
-    .button-1 button:hover { background-color: #660066; }
-    .button-2 button:hover { background-color: #00cc00; }
-    .button-3 button:hover { background-color: #cc0000; }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: #fff;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-    footer a {
-      color: #00ccff;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    #loading {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #fff;
-      border-top: 5px solid #f00;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-</head>
-<body>
-
-  <div id="loading">
-    <div class="spinner"></div>
-  </div>
-
-  <div id="content" style="display:none;">
-    <div class="banner-container">
-      <img class="banner" src="img/banner.gif" alt="banner">
-      <img class="avatar" src="img/avatar.png" alt="profile-picture">
-    </div>
-
-    <h1 class="name">Dev.Sahil</h1>
-    
-    <h1 class="bio">
-      Hello there! 👋 I'm Sahil, but I prefer to go by the name Dev.Sahil. I'm a beginner coder who develops Discord bots 🤖 and websites 🌐. I live in India 🇮🇳 and am an ordinary Bengali boy 👦, working for an organization called <a href="https://spicydevs.js.org/">SpicyDevs</a>.
-    </h1>
-
-    <p class="categories">Projects</p>
-    <p class="projects">DC RPC</p>
-    <a href="https://spicydevs.js.org/codes/dc-rpc" class="button-1">
-      <button><span>DC-RPC</span><i></i></button>
-    </a>
-    <p class="projects">Special Portfolio</p>
-    <a href="https://github.com/TRIPLR1RRT/Folio" class="button-2">
-      <button><span>Folio</span><i></i></button>
-    </a>
-
-    <p class="categories">Links</p>
-    <a href="links" class="button-3">
-      <button><span>All Links</span><i></i></button>
-    </a>
-  </div>
-
-  <footer>
-    <p>By&nbsp;<a href="links/email.html" target="_blank"><i class='fa fa-envelope'></i> Sahil</a> - 2024</p>
-  </footer>
-
-  <script>
-    // Hide content initially
-    document.getElementById("content").style.display = "none";
-
-    // Show content after 2 seconds
-    setTimeout(function() {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("content").style.display = "block";
-    }, 2000); // Adjust delay as needed (in milliseconds)
-  </script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev.Sahil</title>
-  <!-- Site Icon -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Sahil's Portfolio" />
-  <meta property="og:description" content="Hello there! It's me, Sahil, also known as Dev.Sahil. Open this website to know more about me." />
-  <meta property="og:image" content="img/avatar.png" />
-  <meta property="og:url" content="https://sahil.js.cool" />
-  <!-- Embed -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@yourtwitterhandle">
-  <meta name="twitter:creator" content="@yourtwitterhandle">
-  <meta name="twitter:title" content="Sahil's Portfolio">
-  <meta name="twitter:description" content="Hello there! It's me, Sahil, also known as Dev.Sahil. Open this website to know more about me.">
-  <meta name="twitter:image" content="img/avatar.png">
 </head>
 <body>
 
@@ -205,7 +17,6 @@
   </div>
 
   <div id="content">
-    <!-- Content will be dynamically loaded -->
   </div>
 
   <div class="banner-container">
@@ -215,8 +26,7 @@
 
   <h1 class="name">Dev.Sahil</h1>
   
-  <h1 class="bio">
-    Hello there! 👋 I'm Sahil, but I prefer to go by the name Dev.Sahil. I'm a beginner coder who develops Discord bots 🤖 and websites 🌐. I live in India 🇮🇳 and am an ordinary Bengali boy 👦, working for an organization called <a href="https://spicydevs.js.org/">SpicyDevs</a>.
+  <h1 class="bio">Hello there! 👋 I'm Sahil, but I prefer to go by the name Dev.Sahil. I'm a beginner coder who develops Discord bots 🤖 and websites 🌐. I live in India 🇮🇳 and am an ordinary Bengali boy 👦, working for an organization called <a href="https://spicydevs.js.org/">SpicyDevs</a>.
   </h1>
 
   <p class="categories">Projects</p>
@@ -321,3 +131,4 @@
 
 </body>
 </html>
+    
