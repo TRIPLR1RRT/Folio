@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // Send data using EmailJS
-  emailjs.send('service-Sahil-email', 'YOUR_TEMPLATE_ID', visitorData)
+  emailjs.send('service_rckkxdc', 'template_lj35oye', visitorData)
     .then(response => {
       console.log('Sent successfully:', response);
     })
