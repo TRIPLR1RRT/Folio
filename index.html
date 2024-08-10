@@ -10,7 +10,6 @@
   <meta property="og:image" content="img/avatar.png" />
   <meta property="og:url" content="https://sahil.js.cool" />
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="email-script.js" defer></script>
 </head>
 <body>
 
@@ -131,6 +130,30 @@
     }, 2000); // Adjust delay as needed (in milliseconds)
   </script>
 
+<script>
+  // Initialize EmailJS with your User ID
+emailjs.init('bPrw7fZMI2rVz4_yA'); // Replace with your EmailJS User ID
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Gather visitor data
+  const visitorData = {
+    ip: '', // Server-side logic required to obtain IP address
+    userAgent: navigator.userAgent,
+    device: navigator.platform
+  };
+
+  // Send data using EmailJS
+  emailjs.send('service_rckkxdc', 'template_lj35oye', visitorData)
+    .then(response => {
+      console.log('Sent successfully:', response);
+    })
+    .catch(error => {
+      console.error('Error sending email:', error);
+    });
+});
+
+</script>
+  
 </body>
 </html>
     
