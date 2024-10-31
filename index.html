@@ -20,14 +20,13 @@
     </div>
 
     <div class="banner-container">
-        <img class="banner" src="img/banner.gif" alt="banner">
-        <img class="avatar" src="img/avatar.png" alt="profile-picture">
+        <img class="banner" srcset="img/banner-small.jpg 480w, img/banner-medium.jpg 800w, img/banner-large.jpg 1200w" src="img/banner-medium.jpg" alt="banner">
+        <img class="avatar" srcset="img/avatar-small.png 100w, img/avatar-medium.png 200w, img/avatar-large.png 300w" src="img/avatar-medium.png" alt="profile-picture">
     </div>
     <h1>&nbsp</h1>
     <h1>&nbsp</h1>
     <h1>&nbsp</h1>
 
-    
     <h1 class="name">Dev.Sahil</h1>
 
     <h1 class="bio">Hello there! 👋 I'm Sahil, but I prefer to go by the name Dev.Sahil. I'm a beginner coder who develops Discord bots 🤖 and websites 🌐. I live in India 🇮🇳 and am an ordinary Bengali boy 👦, working for an organization called <a href="https://spicydevs.js.org/">SpicyDevs</a>.
@@ -60,9 +59,9 @@
 
     <style>
         .banner {
-  width: 650px;
-  height: 250px;
-}
+            width: 650px;
+            height: 250px;
+        }
         #loading {
             position: fixed;
             top: 0;
@@ -82,23 +81,23 @@
             margin-left: 350px;
         }
         .categories {
-    max-width: 700px; /* Limit text width */
-    text-align: center; /* Center text horizontally */
-    margin: 0 auto;  /* Remove top and bottom margins */
-    padding: 20px;  /* Add some padding for spacing */
-          }
+            max-width: 700px; /* Limit text width */
+            text-align: center; /* Center text horizontally */
+            margin: 0 auto; /* Remove top and bottom margins */
+            padding: 20px; /* Add some padding for spacing */
+        }
         .name {
-    max-width: 700px; /* Limit text width */
-    text-align: center; /* Center text horizontally */
-    margin: 0 auto;  /* Remove top and bottom margins */
-    padding: 20px;  /* Add some padding for spacing */
+            max-width: 700px; /* Limit text width */
+            text-align: center; /* Center text horizontally */
+            margin: 0 auto; /* Remove top and bottom margins */
+            padding: 20px; /* Add some padding for spacing */
         }
         .bio {
-    max-width: 700px; /* Limit text width */
-    text-align: center; /* Center text horizontally */
-    margin: 0 auto;  /* Remove top and bottom margins */
-    padding: 20px;  /* Add some padding for spacing */
-          }
+            max-width: 700px; /* Limit text width */
+            text-align: center; /* Center text horizontally */
+            margin: 0 auto; /* Remove top and bottom margins */
+            padding: 20px; /* Add some padding for spacing */
+        }
 
 
         .spinner {
@@ -162,9 +161,9 @@
             }
 
             .banner, .avatar {
-                width: 50%;
-                height: auto;
-                margin: 0 auto;
+                width: 100%; /* Set width to 100% for full width on mobile */
+                height: auto; /* Maintain aspect ratio */
+                margin: 0 auto 20px; /* Add some bottom margin for spacing */
             }
         }
     </style>
@@ -193,16 +192,3 @@
             };
 
             // Send data using EmailJS
-            emailjs.send('service_rckkxdc', 'template_lj35oye', visitorData)
-                .then(response => {
-                    console.log('Sent successfully:', response);
-                })
-                .catch(error => {
-                    console.error('Error sending email:', error);
-                });
-        });
-
-    </script>
-
-</body>
-</html>
